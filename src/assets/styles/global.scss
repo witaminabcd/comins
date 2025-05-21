@@ -1,0 +1,50 @@
+.page {
+  position: relative;
+  font-family: 'Gilroy',Arial,sans-serif;
+
+}
+
+.page__content {
+  flex: 1 0 auto;
+}
+
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2.2%;
+  margin-bottom: 21px;
+
+  @media #{$desktop} {
+    max-width: 1440px;
+    width: 100%;
+  }
+}
+
+.page-head__title {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-head__exit {
+  font-size: 16px;
+  color: black;
+
+  &:hover {
+    color: #ea8d1b;
+    text-decoration: underline;
+  }
+}
+
+.container {
+  @include container();
+  padding: 0 column(1, 36);
+  margin-bottom: rhythm(4);
+}
+
+.loading-images {
+  display: none;
+}

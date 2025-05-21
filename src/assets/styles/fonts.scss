@@ -1,0 +1,24 @@
+// Вставка шрифтов
+
+@include font-face('Gilroy', 'Gilroy-Regular', $font-primary-regular, normal, woff2);
+@include font-face('Gilroy', 'gilroy-bold', $font-primary-bold, bold, ttf);
+//@include font-face('Gilroy', 'Gilroy-Light', $font-primary-light, light, otf);
+
+//@include font-face($font-primary-name, 'montserrat-v21-latin_cyrillic-regular', $font-primary-regular, normal, woff2 woff ttf);
+//@include font-face($font-primary-name, 'montserrat-v21-latin_cyrillic-700', $font-primary-bold, normal, woff2 woff ttf);
+//@include font-face($font-primary-name, 'montserrat-v21-latin_cyrillic-600', $font-primary-samibold, normal, woff2 woff ttf);
+//@include font-face($font-primary-name, 'montserrat-v21-latin_cyrillic-italic', $font-primary-bold, italic, woff2 woff ttf);
+//
+//@include font-face(Montserat3, 'GajrajOne-Regular', $font-primary-bold, normal, ttf);
+//
+//
+//@include font-face(Montserat3, '21138', $font-primary-bold, normal, ttf);
+
+//GajrajOne-Regular.ttf
+//@include font-face(Lineseed2, 'LINESeedSans_W_Rg.eot', $font-primary-regular, normal,  eot woff2 woff );
+
+//
+//@include font-face( Line-seed, 'WOFF/LINESeedJP_OTF_Bd.woff', $font-primary-regular, normal,  woff );
+//@include font-face('Line-seed', 'WOFF/LINESeedJP_OTF_Eb.woff', $font-primary-bold, normal, woff2 woff ttf);
+//@include font-face('Line-seed', 'WOFF/LINESeedJP_OTF_Rg.woff', $font-primary-samibold, normal, woff2 woff ttf);
+//@include font-face('Line-seed', 'WOFF/LINESeedJP_OTF_Th.woff', $font-primary-bold, italic, woff2 woff ttf);

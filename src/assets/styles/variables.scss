@@ -1,0 +1,128 @@
+// GRID
+// Максимальная ширина контейнера
+// Рекомендуемые зачения и единицы: auto | px | % | vw
+// Если единицы не указаны будут px
+$grid-container: (
+        'mobile':               100%,
+        'mobile-landscape':     100%,
+        'tablet':               98%,
+        'tablet-landscape':     98%,
+        'desktop':              1440px,
+        'desktop-wide':         1440px,
+        'fullhd':               1440px,
+        'ultra':                1440px
+);
+
+// column amount
+$grid-columns:            36;
+
+// Отступы между колонками и внутри колонок
+// Отступы Будут пересчитаны в процены, а указанные значения будут минимальными
+// $mobile | $tablet | $tablet-landscape | $desktop | $desktop-wide | $fullhd | $ultra
+$grid-indents: (
+        'mobile':               0,
+        'mobile-landscape':     0,
+        'tablet':               0,
+        'tablet-landscape':     0,
+        'desktop':              0,
+        'desktop-wide':         0,
+        'fullhd':               0,
+        'ultra':                0
+);
+
+// vertical rhythm step
+$rhythm:                  4px;
+
+// breakpoints
+$breakpoints:  (
+        'mobile':               0,
+        'mobile-landscape':     568,
+        'tablet':               768,
+        'tablet-landscape':     1024,
+        'desktop':              1280,
+        'desktop-wide':         1440,
+        'fullhd':               1920,
+        'ultra':                2560
+);
+
+/* COLORS */
+/* GRAY */
+$color-gray:            		    #8F8F8F;
+$color-gray-lightest:			    	#F5F5F5;
+$color-gray-lighten:    		    #DDDDDD;
+$color-gray-light:      		    #BEC7CE;
+$color-gray-semidark:   		    #C4C4C4;
+$color-gray-dark:       		    #474D5A;
+$color-gray-darkly:       		  #797979;
+$color-gray-darken:     		    #555555;
+$color-gray-darkest:			      #333333;
+$color-black:					          #000000;
+$color-white:				            #FFFFFF;
+
+/* BRANDS */
+$color-brand-primary:               #FF5D14;
+$color-brand-primary-light:         #FF8115;
+$color-brand-primary-lighten:       #FFA379;
+$color-brand-primary-lightest:      #FFEEE7;
+$color-brand-primary-dark:          darken($color-brand-primary, 10%);
+$color-brand-primary-darken:        darken($color-brand-primary, 20%);
+$color-brand-primary-darkest:       darken($color-brand-primary, 30%);
+
+$color-brand-secondary:			    		#BEC7CE;
+$color-brand-secondary-light:       lighten($color-brand-secondary, 10%);
+$color-brand-secondary-lighten:     lighten($color-brand-secondary, 20%);
+$color-brand-secondary-lightest:    lighten($color-brand-secondary, 30%);
+$color-brand-secondary-dark:	    	#F58220;
+$color-brand-secondary-darken:	    darken($color-brand-secondary, 20%);
+$color-brand-secondary-darkest:	    darken($color-brand-secondary, 30%);
+
+/* ACCEDENT */
+$color-accedent-warning:            #FF0000;
+$color-accedent-success:            #35B751;
+$color-accedent-special:            #0b82f7;
+$color-accedent-attention:          #FFB400;
+$color-accedent-delete:             $color-accedent-warning;
+$color-accedent-danger:             $color-accedent-warning;
+
+$color-background:				    			#FFFFFF;
+$color-border:				    			    #DDDDDD;
+
+// TEXT
+$color-text-main:				    				$color-black;
+$color-text-light:				   				$color-gray-darken;
+
+// LINKS
+$color-link:            	        	$color-brand-primary-light;
+$color-link-hover:      	        	$color-brand-primary;
+$color-link-focus:      	        	$color-brand-primary;
+$color-link-active:      	        	$color-brand-primary-light;
+
+// FONTS
+$font-primary-basic:                10px;
+$font-primary-size:									1.4rem;
+$font-primary-name:									'Montserat2';
+$font-primary-family:								'Montserat', sans-serif;
+$font-primary-light:								300;
+$font-primary-regular:							400;
+$font-primary-samibold:							500;
+$font-primary-bold:									700;
+
+$font-secondary-basic:              10px;
+$font-secondary-size:								1.4rem;
+$font-secondary-name:								'Montserat';
+$font-secondary-family:							'Montserat', sans-serif;
+$font-secondary-light:							300;
+$font-secondary-regular:						400;
+$font-secondary-bold:								700;
+
+$line-height:					    1.5em;
+
+$my-line-height: 20px;
+
+$font-primary-base-metrics:  (
+	capHeight: 1456,
+	ascent: 1900,
+	descent: -500,
+	lineGap: 0,
+	unitsPerEm: 2048,
+);

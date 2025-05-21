@@ -1,0 +1,83 @@
+.header {
+  @include container();
+
+  .header-wrap {
+    height: 80px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    .header-cont {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 2rem;
+      align-items: center;
+
+      .header-text {
+        max-width: 120px;
+        font-family: GT Eesti Pro Display;
+        font-weight: 400;
+        font-size: 11.81px;
+        line-height: 15.6px;
+        letter-spacing: 0.25px;
+        border-left: 2px solid black;
+        padding-left: 20px;
+
+      }
+    }
+
+    .header-menu {
+      ul {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 2rem;
+      }
+
+    }
+
+    .header-mini {
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      gap: 1rem;
+
+      img {
+        cursor: pointer;
+      }
+
+    }
+
+    .header-phone {
+      display: none;
+    }
+
+  }
+
+  @media #{$mobile-only-two} {
+    .header-wrap {
+      .header-cont {
+        gap: 0;
+
+        .header-text {
+
+          padding-left: 10px;
+
+        }
+      }
+
+      .header-menu {
+        display: none;
+      }
+
+      .header-phone {
+        display: block;
+      }
+
+      .header-like {
+        display: none;
+      }
+    }
+  }
+}

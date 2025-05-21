@@ -1,0 +1,129 @@
+.bandw{
+  .bandw-wrap{
+    @include container();
+    .bandw__blocks{
+      display: flex;
+      gap: 2rem;
+    }
+    .bandw__block{
+      width: calc(50% - 1rem);
+      background-color: $color-moloko-ban;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      border-radius: 12px;
+    }
+    .bandw__block:last-child {
+      background-color: black;
+      color: white;
+    }
+      .bandw__block-cont{
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 20px;
+
+    }
+    .bandw__block-title{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 39.84px;
+      line-height: 52px;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: middle;
+
+    }
+    .bandw__block-text{
+
+    }
+    .bandw__block-prices{
+
+    }
+    .bandw__block-discount{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .bandw__block-discount-t{
+      font-family: Tondo Corp;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 19.5px;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: line-through;
+      color: $color-moloko-darm;
+    }
+    .bandw__block-procent {
+      background-color: $color-discount-red;
+      padding:10px 20px ;
+      border-radius: 9px;
+      color: white;
+      font-family: Tondo Corp;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 11px;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: middle;
+
+    }
+
+
+    .bandw__block-price{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 36.4px;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: middle;
+
+    }
+    .bandw__block-img{
+      img{
+        max-width: 100%;
+      }
+    }
+
+  }
+  @media #{$mobile-only-two} {
+    .bandw-wrap {
+
+
+      .bandw__block-title{
+        font-family: GT Eesti Pro Display;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 52px;
+        letter-spacing: 0%;
+        text-align: center;
+        vertical-align: middle;
+
+      }
+      .bandw__block-price{
+
+      }
+      .bandw__blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .bandw__block {
+        width: 100%;
+      }
+      .bandw__block-cont {
+        max-width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 15px;
+
+      }
+    }
+  }
+}

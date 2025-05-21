@@ -1,0 +1,116 @@
+.catalog{
+  @include container();
+  @include padding-vertical-30();
+  .catalog-wrap{
+    .catalog__blocks{
+      display: grid;
+      //grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,calc(33% - 1rem));
+      justify-content: space-between;
+      //grid-auto-flow: column;
+      gap: 1rem;
+      .catalog__block{
+        padding: 30px;
+        background: #F8F8F8;
+        display: grid;
+        grid-auto-flow: row;
+        //grid-template-columns: 50% 50%;
+        gap: 1rem;
+        position: relative;
+        border-radius: 12px;
+        .catalog__block-cont{
+              .catalog__block-count{
+                background: white;
+                padding: 10px 20px;
+                border-radius: 31px;
+                display: inline-block;
+                text-align: start;
+              }
+            .catalog__block-title{
+            z-index: 500;
+            font-family: GT Eesti Pro Display;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 32px;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            max-width: 50%;
+            position: relative;
+            top: 40px;
+
+
+          }
+        }
+        .catalog__block-imgmini {
+          display: none;
+        }
+        .catalog__block-img{
+          display: flex;
+          justify-content: flex-end;
+          img{
+            max-width: 100%;
+          }
+        }
+        .catalog__block-href{
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+        }
+
+      }
+
+    }
+  }
+  @media #{$mobile-only-two} {
+    .catalog-wrap {
+      .catalog__blocks {
+          justify-content: space-around;
+        grid-template-columns: repeat(3,calc(33% - 1rem));
+        gap: 1rem;
+        padding: 0 20px;
+        .catalog__block {
+            background-color: white;
+          border: 1px solid #F8F8F8;
+          gap: 1rem;
+          padding: 10px;
+          .catalog__block-cont {
+            order: 2;
+            justify-items: center;
+            padding: 0 0;
+
+            .catalog__block-title{
+              max-width: 100%;
+              text-align: center;
+              position: relative;
+              top: auto;
+              font-family: GT Eesti Pro Display;
+              font-weight: 300;
+              font-size: 10px;
+              line-height: 100%;
+              letter-spacing: 0%;
+              text-align: center;
+
+            }
+            .catalog__block-count{
+              display: none;
+            }
+          }
+            .catalog__block-imgmini {
+              order: 1;
+              display: flex;
+              justify-content: center;
+
+            }
+
+          .catalog__block-img {
+            display: none;
+          }
+          .catalog__block-href {
+            display: none;
+          }
+          }
+      }
+    }
+  }
+  
+}

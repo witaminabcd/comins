@@ -1,0 +1,55 @@
+{% extends '../assets/layout/base.twig' %}
+
+{% block top %}
+
+{% endblock %}
+
+{% block body %}
+
+    {% set title = 'Главная - home' %}
+    {% set meta_d = 'Описание' %}
+    {% set theme_color = '#FFFFFF' %}
+    {% set body_class = 'page' %}
+
+{#    <main>#}
+{#        <h1 class="visually-hidden">Заголовок</h1>#}
+
+{#        {% include '../components/t-banner/t-banner.twig' %}#}
+
+    {% include '../components/header/header.twig' %}
+
+    {% include '../components/banner/banner.twig' %}
+
+    {% include '../components/catalog/catalog.twig' %}
+
+    {% include '../components/bandw/bandw.twig' %}
+    {% include '../components/brands/brands.twig' %}
+    {% include '../components/about/about.twig' %}
+
+
+
+{#    {% include '../components/jurnal/jurnal.twig' %}#}
+
+{#    {% include '../components/task/task.twig' %}#}
+
+{#        {% include '../components/portfolio/portfolio.twig' %}#}
+
+
+{#    {% include '../components/sheme/sheme.twig' %}#}
+{#    {% include '../components/our-clients/our-client.twig' %}#}
+
+
+
+{#    {% include '../components/print/print.twig' %}#}
+{#    {% include '../components/formms/form-dis.twig' %}#}
+{#    {% include '../components/offer/offer.twig' %}#}
+
+
+
+
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

@@ -1,0 +1,159 @@
+.mobile-hidden {
+  @media #{$mobile-only} {
+    display: none !important;
+  }
+}
+
+.mobile-up-hidden {
+  @media #{$mobile-only} {
+    display: none !important;
+  }
+}
+
+.tablet-hidden {
+  @media #{$tablet-only} {
+    display: none !important;
+  }
+}
+
+.tablet-up-hidden {
+  @media #{$tablet} {
+    display: none !important;
+  }
+}
+
+.tablet-landscape-hidden {
+  @media #{$tablet-landscape-only} {
+    display: none !important;
+  }
+}
+
+.tablet-landscape-up-hidden {
+  @media #{$tablet-landscape} {
+    display: none !important;
+  }
+}
+
+.desktop-hidden {
+  @media #{$desktop-only} {
+    display: none !important;
+  }
+}
+
+.desktop-up-hidden {
+  @media #{$desktop} {
+    display: none !important;
+  }
+}
+
+.desktop-wide-hidden {
+  @media #{$desktop-wide-only} {
+    display: none !important;
+  }
+}
+
+.desktop-wide-up-hidden {
+  @media #{$desktop-wide} {
+    display: none !important;
+  }
+}
+
+.fullhd-hidden {
+  @media #{$fullhd-only} {
+    display: none !important;
+  }
+}
+
+.fullhd-up-hidden {
+  @media #{$fullhd} {
+    display: none !important;
+  }
+}
+
+.ultra-hidden {
+  @media #{$ultra} {
+    display: none !important;
+  }
+}
+
+.container {
+  @include container();
+}
+
+.is-hidden {
+  @include visibility-hidden();
+}
+
+.is-visible {
+  @include visibility-visible();
+}
+
+
+.margin-vertical-20 {
+  margin-top: rhythm(5);
+  margin-bottom: rhythm(5);
+}
+
+.margin-horizontal-20 {
+  margin-left: rhythm(5);
+  margin-right: rhythm(5);
+}
+
+.margin-full-20 {
+  margin-top: rhythm(5);
+  margin-bottom: rhythm(5);
+  margin-left: rhythm(5);
+  margin-right: rhythm(5);
+}
+
+.margin-vertical-40 {
+  margin-top: rhythm(10);
+  margin-bottom: rhythm(10);
+}
+
+.margin-horizontal-40 {
+  margin-left: rhythm(10);
+  margin-right: rhythm(10);
+}
+
+.margin-full-40 {
+  margin-top: rhythm(10);
+  margin-bottom: rhythm(10);
+  margin-left: rhythm(10);
+  margin-right: rhythm(10);
+}
+
+
+.padding-vertical-20 {
+  padding-top: rhythm(5);
+  padding-bottom: rhythm(5);
+}
+
+.padding-horizontal-20 {
+  padding-left: rhythm(5);
+  padding-right: rhythm(5);
+}
+
+.padding-full-20 {
+  padding-top: rhythm(5);
+  padding-bottom: rhythm(5);
+  padding-left: rhythm(5);
+  padding-right: rhythm(5);
+}
+
+.padding-vertical-40 {
+  padding-top: rhythm(10);
+  padding-bottom: rhythm(10);
+}
+
+.padding-horizontal-40 {
+  padding-left: rhythm(10);
+  padding-right: rhythm(10);
+}
+
+.padding-full-40 {
+  padding-top: rhythm(10);
+  padding-bottom: rhythm(10);
+  padding-left: rhythm(10);
+  padding-right: rhythm(10);
+}

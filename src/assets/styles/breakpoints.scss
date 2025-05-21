@@ -1,0 +1,74 @@
+//СИНТАКСИС МЕДИА ЗАПРОСОВ
+//
+//@media #{$tablet} { ... }
+//@media #{$tablet-only} { ... }
+//@media #{$desktop} { ... }
+//@media #{$desktop-only} { ... }
+//$breakpoints:  (
+//        'mobile':               0,
+//        'mobile-landscape':     568,
+//        'tablet':               768,
+//        'tablet-landscape':     1024,
+//        'desktop':              1280,
+//        'desktop-wide':         1440,
+//        'fullhd':               1920,
+//        'ultra':                2560
+//);
+//$screen: "only screen";
+$screen: "screen";
+$mobile: "#{$screen}";
+//(от 0-768) при смене ширины использовать !important
+//$mobile-only-two: "#{$screen} and (max-width: #{map-get($breakpoints, 'tablet') - 1}px)";
+
+//чтобы не путать это и есть ALL ONLY
+$mobile-only-two: "#{$screen} and (max-width: #{map-get($breakpoints, 'tablet') - 1 }px)";
+
+//1
+$mobile-only: "#{$screen} and (max-width: #{map-get($breakpoints, 'mobile-landscape') - 1}px)";
+$mobile-landscape: "#{$screen} and (min-width:#{map-get($breakpoints, 'mobile-landscape')}px) and (orientation:landscape)";
+//$mobile-landscape-only: "#{$screen} and (min-width:#{map-get($breakpoints, 'mobile-landscape')}px) and (orientation:landscape) and (max-width:#{map-get($breakpoints, 'tablet') - 1}px)";
+//2
+$mobile-landscape-only: "#{$screen} and (min-width:#{map-get($breakpoints, 'mobile-landscape')}px) and  (max-width:#{map-get($breakpoints, 'tablet') - 1}px)";
+//(от 0-800) при использование с прошлыми дисплеями , прошлым ставить !important
+$mobile-to-tablet-only: "#{$screen} and (max-width:#{map-get($breakpoints, 'tablet-landscape') - 1}px)";
+//(от 0-1024) при использование с прошлыми дисплеями , прошлым ставить !important
+$mobile-to-all-tablet-only: "#{$screen} and (max-width:#{map-get($breakpoints, 'desktop') - 1}px)";
+//3
+$tablet: "#{$screen} and (min-width:#{map-get($breakpoints, 'tablet')}px)";
+$tablet-only: "#{$screen} and (min-width:#{map-get($breakpoints, 'tablet')}px) and (max-width:#{map-get($breakpoints, 'tablet-landscape') - 1}px)";
+//4
+$tablet-landscape: "#{$screen} and (min-width:#{map-get($breakpoints, 'tablet-landscape')}px)";
+$tablet-landscape-only: "#{$screen} and (min-width:#{map-get($breakpoints, 'tablet-landscape')}px) and (max-width:#{map-get($breakpoints, 'desktop') - 1}px)";
+//(на 2 дисплея    768-1280 )
+$tablet-all-only: "#{$screen} and (min-width:#{map-get($breakpoints, 'tablet')}px) and (max-width:#{map-get($breakpoints, 'desktop') - 1}px)";
+//5(на 3 дисплея    1280-2520)
+$desktop: "#{$screen} and (min-width:#{map-get($breakpoints, 'desktop')}px)";
+//6 //только на десктоп
+$desktop-only: "#{$screen} and (min-width:#{map-get($breakpoints, 'desktop')}px) and (max-width:#{map-get($breakpoints, 'desktop-wide') - 1}px)";
+//7-8(на 2 дисплея    1280-1920)
+$desktop-all-only: "#{$screen} and (min-width:#{map-get($breakpoints, 'desktop')}px) and (max-width:#{map-get($breakpoints, 'fullhd') - 1}px)";
+//8
+$desktop-wide: "#{$screen} and (min-width:#{map-get($breakpoints, 'desktop-wide')}px)";
+$desktop-wide-only: "#{$screen} and (min-width:#{map-get($breakpoints, 'desktop-wide')}px) and (max-width:#{map-get($breakpoints, 'desktop-wide') - 1}px)";
+//9
+$fullhd: "#{$screen} and (min-width:#{map-get($breakpoints, 'fullhd')}px)";
+$fullhd-only: "#{$screen} and (min-width:#{map-get($breakpoints, 'fullhd')}px) and (max-width:#{map-get($breakpoints, 'ultra') - 1}px)";
+//10
+$ultra: "#{$screen} and (min-width:#{map-get($breakpoints, 'ultra')}px)";
+$ultra-only: "#{$screen} and (min-width:#{map-get($breakpoints, 'ultra')}px) and (max-width: 10000px)";
+
+$search-hide: "#{$screen} and (min-width:#{map-get($breakpoints, 'tablet')}px) and (max-width: 960px)";
+
+$main-banner: "#{$screen} and (max-width: 425px)";
+
+// breakpoints для генерации колонок и размеров шрифтов
+$breakpoints-list: (
+        'mobile':           $mobile,
+        'mobile-landscape': $mobile-landscape,
+        'tablet':           $tablet,
+        'tablet-landscape': $tablet-landscape,
+        'desktop':          $desktop,
+        'desktop-wide':     $desktop-wide,
+        'fullhd':           $fullhd,
+        'ultra':            $ultra
+);

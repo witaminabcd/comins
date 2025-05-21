@@ -1,0 +1,53 @@
+// Нормализация
+@import './normalize';
+@import './variables';
+@import './my-variables';
+
+
+* {
+		box-sizing: border-box;
+}
+
+@import './libs/slick/slick';
+@import './libs/slick/slick-theme';
+
+// Переменные
+//@import './old';
+
+// Функции
+@import './functions';
+
+// Миксины
+@import './mixins/mixins';
+@import './mixins/font-face-generator';
+
+// Breakpoints
+@import './breakpoints';
+
+////// Шрифты
+@import './fonts';
+
+// Grid
+@import './grid';
+@import './grid-exemple';
+
+// Default tags
+body {
+		font-family: $font-primary-family;
+}
+//@import './global-tags';
+@import './my-global-tags';
+
+
+
+// Vendor classes
+@import './vendor-classes';
+
+// Libs
+@import './libs/swiper/swiper';
+
+// Components
+@import '../../components/components';
+//
+@import './uikit';
+@import 'global';

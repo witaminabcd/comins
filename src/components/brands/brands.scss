@@ -1,0 +1,38 @@
+.brands{
+  .brands-wrap{
+    @include padding-vertical-30();
+    @include container();
+    margin: 0 auto;
+  }
+  .brands__blocks{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  .brands__block{
+    border-radius: 12px;
+    width: calc((100% / 7) - calc(5rem / 7));
+    padding:30px 30px;
+    background-color: $color-brend-darm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      max-width: 100%;
+    }
+  }
+  @media #{$mobile-only-two} {
+    .brands-wrap {
+
+      .brands__blocks {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .brands__block {
+        border-radius: 12px;
+        width: calc(50% - 1rem);
+      }
+    }
+  }
+}

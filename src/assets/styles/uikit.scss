@@ -1,0 +1,21 @@
+#component-uikit {
+  padding: 20px;
+
+  pre {
+    margin: 20px 0;
+    padding: 20px 0 20px;
+  }
+
+  .component-buttons__list {
+    @include list-all-normalize();
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+
+    li {
+      margin-right: 10px;
+    }
+  }
+}
