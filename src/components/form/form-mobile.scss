@@ -1,0 +1,32 @@
+@media #{$mobile-only-two} {
+  .request-form {
+    flex-direction: column;
+    .form-image {
+      width: 100%;
+      order: 1;
+      margin-top: 30px;
+    }
+    .form-title-block{
+      display: block;
+      padding: 15px 20px;
+    }
+    .form-title-none {
+      display: none;
+    }
+      .form-row {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-content {
+      width: 100%;
+      order: 2;
+      gap: 1rem;
+      padding: 30px 20px;
+      border-radius: unset;
+    }
+    .form-row {
+      max-width: 100%;
+    }
+    }
+}
