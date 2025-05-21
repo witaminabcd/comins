@@ -1,0 +1,164 @@
+// Переменные
+
+
+// Миксины
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Стили карточки
+.product-card {
+  padding: 25px;
+  max-width: 300px;
+  border-top: 1px solid #E4E7EA;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-card__top{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    img{
+    }
+  }
+
+
+  .product-image {
+    background-color: white;
+    @include flex-center;
+
+    .product-img {
+      max-width: 100%;
+      width: 100%;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .product-details__cont {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product-title {
+    //font-size: 16px;
+    color: black;
+    //color: $text-color;
+    font-weight: 600;
+  }
+
+  .product-article {
+    font-family: Tondo Corp;
+    font-weight: 400;
+    font-size: 11.81px;
+    line-height: 15.6px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #9EA3AF;
+
+  }
+
+
+  .product-description {
+    font-family: GT Eesti Pro Display;
+    font-weight: 300;
+    font-size: 13.89px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin: 0;
+
+  }
+  .product-wrap{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .product-prices {
+    .product-prices-wrap{
+      display: flex;
+      gap: 0.5rem;
+      .product-badge {
+
+        color: $color-discount-red;
+        font-family: Tondo Corp;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 13px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+
+      }
+
+      .current-price{
+        font-family: Tondo Corp;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 14.3px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        text-decoration: line-through;
+        color: $color-moloko-darm;
+      }
+    }
+    .old-price {
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 19.53px;
+      line-height: 26px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      color: black;
+
+    }
+
+
+  }
+
+  .product-yandex{
+    display: flex;
+    align-items: flex-start;
+  }
+  .product-split{
+    display: flex;
+    align-items: flex-start;
+
+  }
+
+  .add-to-cart-btn {
+    width: 130px;
+    height:40px;
+    background-color: white;
+    color: black;
+    border-radius: 10.5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    @include flex-center;
+    gap: 8px;
+    border: 2px solid #888888;
+
+  }
+
+
+}

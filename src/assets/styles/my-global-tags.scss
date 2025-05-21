@@ -43,6 +43,36 @@ body {
     }
   }
 }
+.hits-btn-go{
+  width: 227px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid #888888;
+  margin: 20px auto;
+  cursor: pointer;
+  display: none;
+
+  a{
+    color: black;
+  }
+  @media #{$mobile-only-two}{
+    display: flex;
+    width: 227px;
+    height: 40px;
+    a{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+
+
+    }
+  }
+}
 
 
 span {

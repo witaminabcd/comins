@@ -1,0 +1,103 @@
+.about{
+  .about-wrap{
+    @include container();
+  }
+  .about__blocks{
+    display: flex;
+    gap: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+
+  }
+  .about-left{
+    flex: 1 1 50%;
+
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: row;
+    align-content: center;
+    gap: 2rem;
+  }
+  .about-left-title{
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+  }
+  .about-right{
+    flex: 1 1 50%;
+
+    img{
+      max-width: 100%;
+    }
+  }
+  .about-left__blocks{
+    display: grid;
+    grid-template-columns: repeat(2 , 50%);
+    gap: 1rem;
+  }
+  .about-left-text{
+    font-family: GT Eesti Pro Display;
+    font-weight: 300;
+    font-size: 21.83px;
+    line-height: 33px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+  }
+  .about-left__block-title{
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+
+  }
+  @media #{$mobile-only-two} {
+    .about__blocks {
+      display: grid;
+      grid-template-rows: repeat(2, 50%);
+    }
+    .about-left{
+      gap: 1rem;
+      padding: 15px;
+    }
+    .about-left-title{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 52px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+
+
+    }
+    .about-left-text{
+      font-family: GT Eesti Pro Display;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: Label Small/Line Height;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      line-height: 20px;
+
+
+    }
+    .about-left__block-title{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 0.5px;
+      vertical-align: middle;
+
+    }
+    .about-left__block{
+      gap: 0;
+    }
+  }
+}

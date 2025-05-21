@@ -1,0 +1,39 @@
+.hits{
+
+  .hits-wrap{
+    @include container();
+    @include padding-vertical-30();
+  }
+  .hits-title{
+    @include padding-vertical-30();
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+  }
+  .hits__blocks{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+  }
+  @media #{$mobile-only-two} {
+    .hits-title {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+      .hits__blocks {
+      justify-content: center;
+
+      gap: 0;
+      grid-template-columns: 80%;
+        .product-card:nth-child(n + 5){
+            display: none;
+        }
+    }
+    }
+}
