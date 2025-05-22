@@ -1,20 +1,23 @@
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 60px 0 30px;
+  @include container();
   font-size: 13px;
   font-family: 'Arial', sans-serif;
-
+  border-radius: 12px;
   &__container {
-   @include container();
-    padding: 30px;
-  }
 
+    padding:50px 30px;
+  }
+  &__brand-mobile-top{
+    display: none;
+    margin-bottom: 40px;
+  }
   &__columns {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 40px;
+    gap: 4rem;
+    margin-bottom: 0;
   }
 
   &__column {
@@ -23,7 +26,10 @@
   }
 
   &__brand {
-    margin-bottom: 30px;
+    margin-bottom: 80px;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
   }
 
   &__logo {
@@ -33,14 +39,19 @@
 
   &__slogan {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
+    font-size: 10px;
     line-height: 1.4;
+    max-width: 100px;
   }
 
   &__subscribe {
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    position: relative;
   }
-
+  &__privacy{
+    display: flex;
+    margin-bottom: 40px;
+  }
   &__input {
     width: 100%;
     padding: 12px 15px;
@@ -56,9 +67,13 @@
   }
 
   &__submit {
-    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 41px;
+    height: 41px;
     padding: 12px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.1);
     color: #000;
     border: none;
     border-radius: 4px;
@@ -84,6 +99,14 @@
 
   &__social {
     margin-bottom: 30px;
+    font-family: Tondo Corp;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    vertical-align: middle;
+    text-transform: uppercase;
+
   }
 
   &__social-title {
@@ -112,10 +135,16 @@
   }
 
   &__menu-title {
-    font-size: 16px;
-    margin-bottom: 20px;
-    font-weight: 600;
+    margin-bottom: 10px;
     color: white;
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 12.7px;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    vertical-align: middle;
+    text-transform: uppercase;
+
   }
 
   &__menu {
@@ -126,27 +155,42 @@
 
   &__link {
     color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 2;
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+    vertical-align: middle;
     transition: color 0.3s;
 
     &:hover {
       color: #fff;
     }
   }
-
+  &__column-contacts{
+    text-align: end;
+  }
   &__contacts {
     list-style: none;
     padding: 0;
     margin: 0;
   }
+  &__contact-item-tel{
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    letter-spacing: 0%;
+    text-align: right;
+    vertical-align: middle;
 
+  }
   &__contact-item {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 14px;
 
     img {
@@ -164,13 +208,17 @@
       color: #fff;
     }
   }
-
+  .footer__column-three{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+  }
   &__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
   }
@@ -188,17 +236,56 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 40px 0 20px;
-
-    &__columns {
-      flex-direction: column;
-      gap: 30px;
+    padding: 20px 0 20px;
+    position: relative;
+    &__container{
+      padding:0 20px;
     }
+    &__column-hide-mobile{
+      display: none;
 
+    }
+    &__columns {
+      flex-direction: row;
+      gap: 2px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__column-four{
+      display: none;
+    }
+    &__brand-mobile-top{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    &__column{
+      max-width: calc(50% - 1rem);
+      width: calc(50% - 1rem);
+      min-width: auto;
+    }
+    &__brand{
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+    &__subscribe{
+      display: none;
+    }
+    &__privacy{
+      display: none;
+    }
+    &__social{
+      display: none;
+    }
     &__bottom {
+      display: none;
       flex-direction: column;
       gap: 10px;
       text-align: center;
+    }
+    &__column-contacts{
+      width: 100%;
     }
   }
 }
