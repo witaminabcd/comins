@@ -167,3 +167,121 @@ const swiperportfolio = new Swiper('.swiperportfolio', {
     $('#more-nav').moreNav();
 
 })(jQuery);
+
+
+
+
+// catalog.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Инициализация слайдера цены
+    const rangeSlider = document.querySelector('.range-slider');
+    const minPriceInput = document.querySelector('.min-input');
+    const maxPriceInput = document.querySelector('.max-input');
+    const minPriceSlider = document.querySelector('.min-price');
+    const maxPriceSlider = document.querySelector('.max-price');
+    const filterTitle = document.getElementsByClassName('filter-title');
+
+    // var elements = document.getElementsByClassName("classname");
+    for (let i = 0; i < filterTitle.length; i++) {
+        filterTitle[i].addEventListener('click', function() {
+            this.classList.toggle('filter-title_close');
+            let el=this.nextElementSibling;
+            this.nextElementSibling.classList.toggle('filter-content_close');
+            // console.log(el);
+            // el.toggleClass('filter-content_close');
+
+        }, false);
+    }
+
+    // filter-title filter-title_close
+    // filterTitle.addEventListener('click', function() {
+    //     // this.re
+    //     console.log('good');
+    //     this.classList.toggle('filter-title_close');
+    //
+    // });
+    // Установка начальных значений
+    let minPrice = parseInt(minPriceSlider.value);
+    let maxPrice = parseInt(maxPriceSlider.value);
+
+    // Обновление полей ввода при изменении ползунков
+    minPriceSlider.addEventListener('input', function() {
+        minPrice = parseInt(this.value);
+        if (minPrice > maxPrice) {
+            minPrice = maxPrice;
+            this.value = minPrice;
+        }
+        minPriceInput.value = minPrice;
+    });
+
+    maxPriceSlider.addEventListener('input', function() {
+        maxPrice = parseInt(this.value);
+        if (maxPrice < minPrice) {
+            maxPrice = minPrice;
+            this.value = maxPrice;
+        }
+        maxPriceInput.value = maxPrice;
+    });
+
+    // Обновление ползунков при изменении полей ввода
+    minPriceInput.addEventListener('change', function() {
+        minPrice = parseInt(this.value);
+        if (minPrice < parseInt(minPriceSlider.min)) {
+            minPrice = parseInt(minPriceSlider.min);
+            this.value = minPrice;
+        }
+        minPriceSlider.value = minPrice;
+    });
+
+    maxPriceInput.addEventListener('change', function() {
+        maxPrice = parseInt(this.value);
+        if (maxPrice > parseInt(maxPriceSlider.max)) {
+            maxPrice = parseInt(maxPriceSlider.max);
+            this.value = maxPrice;
+        }
+        maxPriceSlider.value = maxPrice;
+    });
+
+    // Сортировка товаров
+    const sortingSelect = document.querySelector('.sorting-select');
+    sortingSelect.addEventListener('change', function() {
+        // Здесь будет логика сортировки
+        console.log('Сортировка по:', this.value);
+        // В реальном проекте здесь AJAX запрос или пересортировка элементов
+    });
+
+    // Фильтрация по категориям
+    const checkboxes = document.querySelectorAll('.filter-checkbox input');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            // Здесь будет логика фильтрации
+            console.log('Фильтр изменен:', this.checked);
+        });
+    });
+
+    // Кнопки популярных категорий
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Здесь будет логика фильтрации по категории
+            console.log('Выбрана категория:', this.textContent);
+        });
+    });
+
+    // Пагинация
+    const paginationLinks = document.querySelectorAll('.pagination-link');
+    paginationLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Здесь будет логика пагинации
+            console.log('Переход на страницу:', this.textContent);
+        });
+    });
+
+    // Кнопка "Показать еще"
+    const loadMoreBtn = document.querySelector('.load-more');
+    loadMoreBtn.addEventListener('click', function() {
+        // Здесь будет логика подгрузки товаров
+        console.log('Загрузить еще товары');
+    });
+});

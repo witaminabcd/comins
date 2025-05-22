@@ -1,0 +1,10 @@
+.simple{
+  @include container();
+  @include padding-vertical-30();
+  .simple-wrap{
+
+  }
+  @media #{$mobile-only-two} {
+    display: none;
+  }
+}

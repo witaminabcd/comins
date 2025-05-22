@@ -1,0 +1,298 @@
+{# catalog.twig #}
+{#{% extends 'base.twig' %}#}
+
+{#{% block content %}#}
+    <div class="catalog">
+        {# Сортировка и пагинация вверху #}
+        <div class="catalog-top-controls">
+            <div class="popular-categories">
+                <div class="category-buttons">
+                    <button class="category-btn">Подвесные</button>
+                    <button class="category-btn">Пристенные</button>
+                    <button class="category-btn">Угловые</button>
+                    <button class="category-btn">Островные</button>
+                </div>
+            </div>
+            <div class="sorting">
+                <span class="sorting-label">Сортировать по:</span>
+                <select class="sorting-select">
+                    <option value="popular">Популярности</option>
+                    <option value="price-asc">Цене (по возрастанию)</option>
+                    <option value="price-desc">Цене (по убыванию)</option>
+                    <option value="newest">Новинкам</option>
+                    <option value="rating">Рейтингу</option>
+                </select>
+            </div>
+
+
+        </div>
+
+        {# Основной контейнер с фильтрами и товарами #}
+        <div class="catalog-container">
+            {# Боковая панель фильтров #}
+            <aside class="catalog-filters">
+                <div class="filter-section">
+                    <h3 class="filter-title">Категории</h3>
+                    <div class="filter-section-categorys">
+                        <div class="filter-section-category filter-section-category_active">Подвесные камины</div>
+                        <div class="filter-section-category">Пристенные камины</div>
+                        <div class="filter-section-category">Угловые камины</div>
+                        <div class="filter-section-category">Островные камины</div>
+
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3 class="filter-title">Цена, ₽</h3>
+                    <div class="price-range-slider">
+
+                        <div class="price-inputs">
+                            <input type="number" class="price-input min-input" value="42360">
+                            <span class="price-separator">-</span>
+                            <input type="number" class="price-input max-input" value="2390000">
+                        </div>
+                        <div class="range-slider">
+                            <input type="range" class="min-price" min="0" max="2390000" value="0">
+                            <input type="range" class="max-price" min="0" max="2390000" value="2390000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-title">Бренд</h3>
+                    <div class="filter-checkboxes">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Loki </span>
+                            <span class="filter-count">(61)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Ergofocus </span>
+                            <span class="filter-count">(1)</span>
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-title filter-title_close">Форма</h3>
+                    <div class="filter-checkboxes filter-content_close">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Прямоугольная </span>
+                            <span class="filter-count">(19)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Круглая </span>
+                            <span class="filter-count">(8)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Квадратная </span>
+                            <span class="filter-count">(1)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Закругленная </span>
+                            <span class="filter-count">(12)</span>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3 class="filter-title">Форма</h3>
+                    <div class="filter-checkboxes ">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Прямоугольная </span>
+                            <span class="filter-count">(19)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Круглая </span>
+                            <span class="filter-count">(8)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Квадратная </span>
+                            <span class="filter-count">(1)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Закругленная </span>
+                            <span class="filter-count">(12)</span>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3 class="filter-title">Форма</h3>
+                    <div class="filter-checkboxes">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Прямоугольная </span>
+                            <span class="filter-count">(19)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Круглая </span>
+                            <span class="filter-count">(8)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Квадратная </span>
+                            <span class="filter-count">(1)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Закругленная </span>
+                            <span class="filter-count">(12)</span>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3 class="filter-title">Форма</h3>
+                    <div class="filter-checkboxes">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Прямоугольная </span>
+                            <span class="filter-count">(19)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Круглая </span>
+                            <span class="filter-count">(8)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Квадратная </span>
+                            <span class="filter-count">(1)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Закругленная </span>
+                            <span class="filter-count">(12)</span>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3 class="filter-title">Форма</h3>
+                    <div class="filter-checkboxes">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Прямоугольная </span>
+                            <span class="filter-count">(19)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Круглая </span>
+                            <span class="filter-count">(8)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Квадратная </span>
+                            <span class="filter-count">(1)</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="filter-name">Закругленная </span>
+                            <span class="filter-count">(12)</span>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="btn-clear">
+                    <a href="">Сбросить</a>
+                </div>
+            </aside>
+
+            {# Список товаров #}
+            <div class="catalog-products-wrap">
+            <main class="catalog-products">
+                {% include '../product/product.twig' %}
+                {% include '../product/product.twig' %}
+
+                {% include '../product/product.twig' %}
+                {% include '../product/product.twig' %}
+                {% include '../product/product.twig' %}
+                {% include '../product/product.twig' %}
+                {% include '../product/product.twig' %}
+                {% include '../product/product.twig' %}
+                {% include '../product/product.twig' %}
+                {% include '../product/product.twig' %}
+                {% include '../product/product.twig' %}
+                {% include '../product/product.twig' %}
+
+                {#                {% for product in products %}#}
+{#                    <div class="product-card">#}
+{#                        <div class="product-image">#}
+{#                            <img src="{{ product.image }}" alt="{{ product.name }}">#}
+{#                            {% if product.discount %}#}
+{#                                <span class="product-badge">-{{ product.discount }}%</span>#}
+{#                            {% endif %}#}
+{#                        </div>#}
+{#                        <div class="product-info">#}
+{#                            <h4 class="product-name">{{ product.name }}</h4>#}
+{#                            <div class="product-price">#}
+{#                                {% if product.old_price %}#}
+{#                                    <span class="old-price">{{ product.old_price }} ₽</span>#}
+{#                                {% endif %}#}
+{#                                <span class="current-price">{{ product.price }} ₽</span>#}
+{#                            </div>#}
+{#                            <button class="add-to-cart">В корзину</button>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+
+            </main>
+                <div class="catalog-bottom-controls">
+                    <button class="load-more">Показать еще</button>
+                    <div class="catalog-bottom-controls-wrap">
+                        <div class="pagination-count">
+                            Показаны 28 из 240
+                        </div>
+
+                        <div class="pagination-bottom">
+                            <a href="#" class="pagination-link active">1</a>
+                            <a href="#" class="pagination-link">2</a>
+                            <a href="#" class="pagination-link">3</a>
+                            <a href="#" class="pagination-link">4</a>
+                            <a href="#" class="pagination-link">5</a>
+{#                            <span class="pagination-dots">...</span>#}
+                            <a href="#" class="pagination-link next">></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {# Кнопка "Показать еще" и пагинация внизу #}
+
+    </div>
+{#{% endblock %}#}
