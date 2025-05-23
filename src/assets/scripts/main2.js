@@ -168,7 +168,59 @@ const swiperportfolio = new Swiper('.swiperportfolio', {
 
 })(jQuery);
 
+// Initialize thumbnail slider
+const thumbnailSlider = new Swiper('.thumbnail-slider', {
+    direction: 'vertical',
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        768: {
+            direction: 'horizontal',
+        }
+    }
+});
 
+const mainSlider = new Swiper('.main-slider', {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+        swiper: thumbnailSlider
+    }
+});
+// Connect sliders
+// mainSlider.controller.control = thumbnailSlider;
+// thumbnailSlider.controller.control = mainSlider;
+
+// Thumbnail click handler
+$('.thumbnail').on('click', function() {
+    $('.thumbnail').removeClass('active');
+    $(this).addClass('active');
+    const index = $(this).index();
+    mainSlider.slideTo(index);
+});
+
+// Tab switching
+$('.tab-btn').on('click', function() {
+    const tabId = $(this).data('tab');
+
+    $('.tab-btn').removeClass('active');
+    $(this).addClass('active');
+
+    $('.tab-content').removeClass('active');
+    $(`#${tabId}`).addClass('active');
+});
+
+// Update thumbnails when main slider changes
+
+// mainSlider.on('slideChange', function() {
+//     $('.thumbnail').removeClass('active');
+//     $('.thumbnail').eq(mainSlider.activeIndex).addClass('active');
+// });
 
 
 // catalog.js
@@ -285,3 +337,4 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Загрузить еще товары');
     });
 });
+

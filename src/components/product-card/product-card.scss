@@ -1,0 +1,398 @@
+/* SCSS Variables */
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2980b9;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --light-gray: #f5f5f5;
+  --gray: #ddd;
+  --dark-gray: #777;
+  --white: #fff;
+}
+
+.product-card-single {
+  width: 100%;
+  .product-card {
+    @include container();
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    box-shadow: none;
+    border: none;
+    box-shadow: 0px 1px 0px 0px #E4E7EA;
+
+  }
+  .product-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .product-info-stock {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .product-brand{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 14px;
+      letter-spacing: 1.2px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-offset: 0%;
+      text-decoration-thickness: 0%;
+      text-decoration-skip-ink: auto;
+      color: black;
+    }
+  }
+
+
+
+  /* Slider section */
+  .product-gallery {
+    //flex: 1;
+    min-width: 300px;
+    width: 50%;
+    display: flex;
+    gap: 15px;
+    padding-top: 50px;
+  }
+
+  .thumbnail-slider {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--gray);
+    cursor: pointer;
+    transition: border-color 0.3s;
+    overflow: hidden;
+  }
+
+  .thumbnail:hover, .thumbnail.active {
+    border-color: var(--primary-color);
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main-slider {
+    flex: 1;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .main-slide {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  /* Product info section */
+  .product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    gap: 1rem;
+    padding: 30px 50px;
+    border-radius: 12px;
+    border: 1px solid #E4E7EA;
+  }
+
+  .product-title {
+    font-size: 24px;
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: black;
+  }
+
+  .product-code {
+    color: $color-blednii-second;
+    font-size: 14px;
+  }
+
+  .product-info__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .price-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .price-section-wrap{
+    display: inline-flex;
+    gap: 1rem;
+  }
+  .current-price {
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 27.45px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+  }
+
+  .old-price {
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14.3px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-decoration: line-through;
+    color: #9EA3AF;
+
+  }
+
+  .discount {
+    display: inline-block;
+    color: $color-discount-red;
+    font-family: Tondo Corp;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .btn-add-card {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    max-height: 44px;
+    color: white;
+    width: 240px;
+  }
+  .btn-like-secondary{
+    height: 44px;
+    width: 44px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #E4E7EA;
+  }
+
+
+  .btn-primary:hover {
+    background-color: var(--secondary-color);
+  }
+  .features-list-title{
+    font-family: Tondo Corp;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16.9px;
+    letter-spacing: 0%;
+    color: black;
+  }
+  .features-list-wrap{
+    padding: 20px;
+    border:1px solid $color-blednii;
+    border-radius: 10px;
+  }
+  .features-list {
+    list-style-type: none;
+  }
+
+  .features-list li {
+    border-bottom: 1px solid $color-blednii;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    span{
+      font-family: Tondo Corp;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 16.9px;
+      letter-spacing: 0%;
+
+    }
+  }
+
+  .features-list li span:first-child {
+    width:50%;
+  }
+
+  .all-artibutes{
+    font-family: Tondo Corp;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16.9px;
+    letter-spacing: 0%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-offset: 0%;
+    text-decoration-thickness: 0%;
+    text-decoration-skip-ink: auto;
+    color: $color-blednii-second;
+    a{
+      text-decoration: none;
+      color: black;
+    }
+  }
+  .delivery-wrap{
+    padding: 20px;
+    border:1px solid $color-blednii;
+    border-radius: 10px;
+  }
+
+  .delivery-title{
+    font-family: Tondo Corp;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16.9px;
+    letter-spacing: 0%;
+    color: black;
+  }
+  .delivery-info {
+    border-radius: 4px;
+    li{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $color-blednii;
+      padding-bottom: 5px;
+      span{
+        font-family: Tondo Corp;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16.9px;
+        letter-spacing: 0%;
+
+
+      }
+    }
+  }
+
+  .delivery-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .product-card__bottoms{
+    display: flex;
+    gap: 1rem;
+    //color:$color-moloko-ban;
+    .product-card__bottom{
+      background-color: $color-moloko-ban;
+      color: black;
+      width: calc(100% / 3);
+      border-radius: 12px;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        font-family: GT Eesti Pro Display;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16.9px;
+        letter-spacing: 0%;
+        text-align: center;
+        vertical-align: middle;
+
+      }
+    }
+  }
+  /* Tabs section */
+  .tabs {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .tabs-header {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    color: var(--dark-gray);
+  }
+
+  .tab-btn.active {
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+  }
+
+  .tab-btn.active:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+  }
+
+  .tab-content {
+    display: none;
+    padding: 15px 0;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .product-gallery {
+      flex-direction: column-reverse;
+    }
+
+    .thumbnail-slider {
+      width: 100%;
+      flex-direction: row;
+      order: 1;
+    }
+
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+    }
+
+    .main-slide {
+      height: 300px;
+    }
+  }
+}
