@@ -1,18 +1,9 @@
 /* SCSS Variables */
 
-:root {
-  --primary-color: #3498db;
-  --secondary-color: #2980b9;
-  --accent-color: #e74c3c;
-  --text-color: #333;
-  --light-gray: #f5f5f5;
-  --gray: #ddd;
-  --dark-gray: #777;
-  --white: #fff;
-}
 
 .product-card-single {
   width: 100%;
+
   .product-card {
     @include container();
     display: flex;
@@ -23,6 +14,7 @@
     box-shadow: 0px 1px 0px 0px #E4E7EA;
 
   }
+
   .product-info-top {
     display: flex;
     justify-content: space-between;
@@ -33,7 +25,8 @@
       align-items: center;
       gap: 0.5rem;
     }
-    .product-brand{
+
+    .product-brand {
       font-family: GT Eesti Pro Display;
       font-weight: 400;
       font-size: 11px;
@@ -49,7 +42,6 @@
       color: black;
     }
   }
-
 
 
   /* Slider section */
@@ -146,10 +138,12 @@
     flex-direction: column;
     gap: 0.5rem;
   }
-  .price-section-wrap{
+
+  .price-section-wrap {
     display: inline-flex;
     gap: 1rem;
   }
+
   .current-price {
     font-family: GT Eesti Pro Display;
     font-weight: 400;
@@ -199,7 +193,8 @@
     color: white;
     width: 240px;
   }
-  .btn-like-secondary{
+
+  .btn-like-secondary {
     height: 44px;
     width: 44px;
     display: flex;
@@ -214,7 +209,8 @@
   .btn-primary:hover {
     background-color: var(--secondary-color);
   }
-  .features-list-title{
+
+  .features-list-title {
     font-family: Tondo Corp;
     font-weight: 400;
     font-size: 13px;
@@ -222,11 +218,13 @@
     letter-spacing: 0%;
     color: black;
   }
-  .features-list-wrap{
+
+  .features-list-wrap {
     padding: 20px;
-    border:1px solid $color-blednii;
+    border: 1px solid $color-blednii;
     border-radius: 10px;
   }
+
   .features-list {
     list-style-type: none;
   }
@@ -236,7 +234,8 @@
     padding-bottom: 5px;
     display: flex;
     justify-content: space-between;
-    span{
+
+    span {
       font-family: Tondo Corp;
       font-weight: 400;
       font-size: 11px;
@@ -247,10 +246,10 @@
   }
 
   .features-list li span:first-child {
-    width:50%;
+    width: 50%;
   }
 
-  .all-artibutes{
+  .all-artibutes {
     font-family: Tondo Corp;
     font-weight: 400;
     font-size: 11px;
@@ -262,18 +261,20 @@
     text-decoration-thickness: 0%;
     text-decoration-skip-ink: auto;
     color: $color-blednii-second;
-    a{
+
+    a {
       text-decoration: none;
       color: black;
     }
   }
-  .delivery-wrap{
+
+  .delivery-wrap {
     padding: 20px;
-    border:1px solid $color-blednii;
+    border: 1px solid $color-blednii;
     border-radius: 10px;
   }
 
-  .delivery-title{
+  .delivery-title {
     font-family: Tondo Corp;
     font-weight: 400;
     font-size: 13px;
@@ -281,14 +282,17 @@
     letter-spacing: 0%;
     color: black;
   }
+
   .delivery-info {
     border-radius: 4px;
-    li{
+
+    li {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid $color-blednii;
       padding-bottom: 5px;
-      span{
+
+      span {
         font-family: Tondo Corp;
         font-weight: 400;
         font-size: 11px;
@@ -304,11 +308,12 @@
     font-weight: bold;
     margin-bottom: 10px;
   }
-  .product-card__bottoms{
+
+  .product-card__bottoms {
     display: flex;
     gap: 1rem;
     //color:$color-moloko-ban;
-    .product-card__bottom{
+    .product-card__bottom {
       background-color: $color-moloko-ban;
       color: black;
       width: calc(100% / 3);
@@ -317,7 +322,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      span{
+
+      span {
         font-family: GT Eesti Pro Display;
         font-weight: 300;
         font-size: 13px;
@@ -329,6 +335,7 @@
       }
     }
   }
+
   /* Tabs section */
   .tabs {
     margin-top: 40px;
@@ -374,25 +381,168 @@
   .tab-content.active {
     display: block;
   }
-
-  @media (max-width: 768px) {
-    .product-gallery {
-      flex-direction: column-reverse;
+  .show-discount{
+    display: none;
+  }
+  //@media (max-width: 768px) {
+  //  .product-gallery {
+  //    flex-direction: column-reverse;
+  //  }
+  //
+  //  .thumbnail-slider {
+  //    width: 100%;
+  //    flex-direction: row;
+  //    order: 1;
+  //  }
+  //
+  //  .thumbnail {
+  //    width: 60px;
+  //    height: 60px;
+  //  }
+  //
+  //  .main-slide {
+  //    height: 300px;
+  //  }
+  //}
+  @media #{$mobile-only-two} {
+    .thumbnail-slider{
+      display: none;
     }
-
-    .thumbnail-slider {
+    .product-card {
+      //padding: 10px;
+    }
+    .product-gallery {
       width: 100%;
-      flex-direction: row;
+      padding-top: 0;
+    }
+    .all-artibutes {
+      display: none;
+    }
+    .product-info-top {
       order: 1;
     }
+    .product-info{
+      border: none;
+      padding: 0;
+    }
+    .product-code {
+      order: 2;
+    }
+    .product-title {
+      order: 3;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+    .product-yandex {
+      order: 6;
+    }
+    .product-split {
+      order: 7;
+    }
+    .btn-add-card{
+      width: auto;
+      min-width: 80px;
 
-    .thumbnail {
-      width: 60px;
-      height: 60px;
+    }
+    .product-card__bottoms {
+      order: 4;
+      flex-wrap: wrap;
+    }
+    .features-list-wrap{
+      order: 8;
+    }
+    .delivery-wrap{
+      order: 9;
+    }
+    .product-info__block {
+      order: 5;
+    }
+    .show-discount{
+      order: 8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .show-discount-text{
+        max-width: 60%;
+        font-family: GT Eesti Pro Display;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+
+      }
+      .show-discount-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 123px;
+        border: 1px solid #FF2C27;
+        border-radius: 12px;
+        a{
+          font-family: GT Eesti Pro Display;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 16.9px;
+          letter-spacing: 0%;
+          text-align: center;
+          vertical-align: middle;
+          color:  #FF2C27;
+
+        }
+      }
     }
 
-    .main-slide {
-      height: 300px;
+    .tabs-header{
+      flex-direction: column;
+      //background-color: transparent;
+
+      .tab-btn{
+        //text-align: start;
+        background-color: transparent;
+        color: black;
+        padding: 10px 0;
+        border-bottom: 1px solid #E5E5E5;
+        border-radius: inherit;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 15px;
+          background-image: url("../img/filteropen.svg");
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+        }
+      }
+      .tab-btn.active{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        opacity: 0.7;
+        //color: #E5E5E5;
+        &:after{
+          content: '';
+          background-image: url("../img/filterclose.svg");
+          width: 10px;
+          height: 10px;
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          top: 15px;
+          left: auto;
+        }
+      }
+
+    }
+    .tab-content{
+      padding: 0;
     }
   }
+
+
 }
