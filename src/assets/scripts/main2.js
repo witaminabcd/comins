@@ -23,8 +23,8 @@ const swiper = new Swiper('.swipergood', {
         type: 'bullets',
     },
     navigation: {
-        nextEl: '.swiper2-button-next',
-        prevEl: '.swiper2-button-prev',
+        nextEl: '.swiper3-button-next',
+        prevEl: '.swiper3-button-prev',
     },
     breakpoints: {
 
@@ -170,11 +170,14 @@ const swiperportfolio = new Swiper('.swiperportfolio', {
 
 // Initialize thumbnail slider
 const thumbnailSlider = new Swiper('.thumbnail-slider', {
+    // modules: [Navigation, Pagination, Scrollbar],
+
     direction: 'vertical',
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
+
     breakpoints: {
         768: {
             direction: 'horizontal',
@@ -184,9 +187,15 @@ const thumbnailSlider = new Swiper('.thumbnail-slider', {
 
 const mainSlider = new Swiper('.main-slider', {
     spaceBetween: 10,
+    pagination: {
+        clickable: true,
+        el: '.swiper2-pagination',
+        type: 'bullets',
+    },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+
+        nextEl: '.swiper2-button-next',
+        prevEl: '.swiper2-button-prev',
     },
     thumbs: {
         swiper: thumbnailSlider
