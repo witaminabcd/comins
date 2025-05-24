@@ -6,7 +6,7 @@
 
 {% block body %}
 
-    {% set title = 'Для профессионалов' %}
+    {% set title = 'Локи бренды' %}
     {% set meta_d = 'Описание' %}
     {% set theme_color = '#FFFFFF' %}
     {% set body_class = 'page' %}
@@ -14,15 +14,11 @@
 
     {% include '../components/header/header.twig' %}
 
+    {% include '../components/banner-mini/banner-mini.twig' %}
+
+    {% include '../components/palazzetti/palazzetti.twig' %}
 
 
-    {% include '../components/banner-simple/banner-simple.twig' %}
-
-    {% include '../components/advantage/advantage.twig' %}
-
-    {% include '../components/best-brends/best-brends.twig' %}
-
-    {% include '../components/receive-form/receive-form.twig' %}
 
 
     {% include '../components/footer/footer.twig' %}

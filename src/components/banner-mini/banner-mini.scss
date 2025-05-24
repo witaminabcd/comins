@@ -1,0 +1,115 @@
+.banner-minimal{
+  height: 430px;
+
+  .banner-minimal-wrap{
+    @include container();
+    height: 430px;
+    overflow: hidden;
+    background: #000;
+    border-radius: 12px;
+    img{
+      width: 100%;
+      max-height: 665px;
+      object-fit: cover;
+      opacity: 0.6;
+      border-radius: 12px;
+    }
+    position: relative;
+    .banner-minimal-text-wrap{
+      opacity: 1;
+      z-index: 1000;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+    }
+    .banner-minimal-text{
+      color: white;
+      max-width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 3rem;
+      //height: 100%;
+
+    }
+    .banner-minimal-text__title{
+      font-family: GT Eesti Pro Display;
+      font-weight: 500;
+      font-size: 52px;
+      line-height: 62.4px;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: middle;
+
+    }
+    .banner-minimal-text__subtitle{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 21.83px;
+      line-height: 33px;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: middle;
+
+    }
+    .banner-minimal-btn{
+      margin-top: 100px;
+    }
+  }
+
+  @media #{$mobile-only-two} {
+    .banner-minimal-wrap{
+      background: #000;
+      .banner-minimal-text-wrap {
+        opacity: 1;
+        z-index: 1000;
+
+      }
+      img{
+        opacity: 0.6;
+        height: 100%;
+        object-fit: cover;
+
+
+      }
+
+      .banner-minimal-text {
+        max-width: 100%;
+        height: auto;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .banner-minimal-text__title{
+        font-family: GT Eesti Pro Display;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+
+
+      }
+      .banner-minimal-text__subtitle{
+        font-family: GT Eesti Pro Display;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+
+      }
+      .banner-minimal-btn{
+        margin-top: auto;
+      }
+    }
+  }
+}
