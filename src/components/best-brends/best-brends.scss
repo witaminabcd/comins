@@ -1,0 +1,32 @@
+.best-brends{
+  .best-brends-title{
+    padding-left:  20px;
+    padding-right:  20px;
+  }
+  .brands__blocks{
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .brands__block{
+    border-radius: 12px;
+    width: calc((100% / 3) - calc(4rem / 3));
+    padding: 80px 30px;
+  }
+  @media #{$mobile-only-two} {
+    .best-brends-title{
+      padding-left:  10px;
+      padding-right:  10px;
+    }
+    .brands__blocks{
+      padding: 0 10px;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .brands__block{
+      border-radius: 12px;
+      width: calc((100% / 2) - calc(2rem / 2));
+      padding: 10px;
+    }
+  }
+}

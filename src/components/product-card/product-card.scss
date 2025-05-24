@@ -388,13 +388,12 @@
     display: none;
   }
 
-  
+
   @media #{$mobile-only-two} {
     .thumbnail-slider{
       display: none;
     }
     .product-card {
-      //padding: 10px;
     }
     .product-gallery {
       width: 100%;

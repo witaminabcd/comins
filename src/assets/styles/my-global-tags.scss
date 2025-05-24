@@ -20,7 +20,60 @@ body {
   flex-direction: column;
 
 }
+.banner-simple-btn{
+  //width: 15%;
+  height: 44px;
+  width: 287px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #E4E7EA;
+  border-radius: 10px;
+  a{
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 12.9px;
+    line-height: 44px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+  }
+  @media #{$mobile-only-two} {
+    background-color: transparent;
+    height: 48px;
+    width: 220px;
+    a{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      color: white;
+    }
+  }
+}
 
+.title-camins{
+  font-family: GT Eesti Pro Display;
+  font-weight: 400;
+  font-size: 51.59px;
+  line-height: 62.4px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  @include padding-vertical-30();
+  @media #{$mobile-only-two} {
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 52px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+  }
+}
 .banner-button{
   border: 1px solid #FFFFFF;
   width: 174px;

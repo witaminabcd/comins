@@ -1,0 +1,73 @@
+.advantage {
+  @include padding-vertical-30();
+
+  .advantage-wrap {
+    @include container();
+  }
+  .advantage-title{
+    padding-left:  20px;
+    padding-right:  20px;
+
+  }
+
+
+  .advantage__blocks {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .advantage__block {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid #E4E7EA;
+    border-radius: 10px;
+
+    .advantage__block-title {
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 23.81px;
+      line-height: 31.2px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+
+    }
+
+    .advantage__block-subtitle {
+      font-family: GT Eesti Pro Display;
+      font-weight: 300;
+      font-size: 13.89px;
+      line-height: 21px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+    }
+
+
+  }
+
+  @media #{$mobile-only-two} {
+    .advantage-wrap {
+    }
+    .advantage-title {
+      padding-left:  10px;
+      padding-right:  10px;
+    }
+
+    .advantage__blocks {
+      padding: 0 10px;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: auto;
+    }
+    .advantage__block {
+      align-items: center;
+      gap: 0.5rem;
+      text-align: center;
+      padding: 15px;
+    }
+  }
+
+}
