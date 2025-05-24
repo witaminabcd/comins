@@ -1,0 +1,218 @@
+.receive-form {
+  @include padding-vertical-30();
+
+  .receive-form-wrap {
+    @include container();
+    background-color: $color-brend-darm;
+    padding: 30px 50px;
+    border-radius: 12px;
+  }
+
+  .receive-form__blocks {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .receive-form__block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .receive-form__block:nth-child(2) {
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 40%;
+    img{
+      max-width: 100%;
+    }
+  }
+
+  .receive-form-title {
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 62.4px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+  }
+
+  .receive-form-subtitle {
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 23.81px;
+    line-height: 31.2px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+  }
+
+  .receive-form-f {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .receive-form-column {
+    display: inline-flex;
+    flex-direction: column;
+    //align-content: flex-start;
+  }
+
+  label {
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16.9px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    padding-bottom: 5px;
+
+  }
+
+  input {
+    height: 46px;
+    width: 316px;
+    border-radius: 10px;
+    border: 1px solid #E4E7EA
+  }
+
+  textarea {
+    height: 86px;
+    border-radius: 10px;
+    width: 520px;
+    border: 1px solid #E4E7EA
+  }
+
+  .receive-form__submit {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    max-width: 550px;
+
+    input {
+      width: 205px;
+      height: 44px;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .receive-form-politics {
+      font-family: GT Eesti Pro Display;
+      font-weight: 300;
+      font-size: 11.81px;
+      line-height: 18px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+
+      text-decoration-style: solid;
+      text-decoration-offset: 0%;
+      text-decoration-thickness: 0%;
+      text-decoration-skip-ink: auto;
+
+      a {
+        text-decoration: underline;
+      }
+
+    }
+  }
+
+  .receive-form__question {
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 23.81px;
+    line-height: 31.2px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+  }
+
+  .receive-form__callback {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+    a {
+      color: black;
+    }
+
+
+  }
+
+  @media #{$mobile-only-two} {
+    .receive-form-wrap {
+
+      padding: 0;
+    }
+    .receive-form__blocks{
+      flex-direction: column;
+    }
+    .receive-form__block:nth-child(1){
+      order: 2;
+      padding: 20px;
+      gap: 1rem;
+    }
+    .receive-form__block:nth-child(2){
+      order: 1;
+      width: 100%;
+      background-color: white;
+    }
+    .receive-form-title{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 28px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+
+    }
+    .receive-form-subtitle{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+
+    }
+    input {
+      width: 100%;
+    }
+    textarea{
+      width: 100%;
+    }
+    .receive-form__submit{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      input {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .receive-form-politics{
+        color: #9EA3AF;
+
+      }
+    }
+    .receive-form__question{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 23.81px;
+      line-height: 31.2px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+
+    }
+  }
+}
