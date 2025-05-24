@@ -347,3 +347,88 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Quantity controls
+//     const quantityControls = document.querySelectorAll('.quantity-control');
+//
+//     quantityControls.forEach(control => {
+//         const minusBtn = control.querySelector('.minus');
+//         const plusBtn = control.querySelector('.plus');
+//         const input = control.querySelector('.quantity-input');
+//
+//         minusBtn.addEventListener('click', () => {
+//             let value = parseInt(input.value);
+//             if (value > 1) {
+//                 input.value = value - 1;
+//                 updateCartSummary();
+//             }
+//         });
+//
+//         plusBtn.addEventListener('click', () => {
+//             let value = parseInt(input.value);
+//             input.value = value + 1;
+//             updateCartSummary();
+//         });
+//
+//         input.addEventListener('change', () => {
+//             let value = parseInt(input.value);
+//             if (isNaN(value) || value < 1) {
+//                 input.value = 1;
+//             }
+//             updateCartSummary();
+//         });
+//     });
+//
+//     // Remove product
+//     const removeButtons = document.querySelectorAll('.remove-btn');
+//     removeButtons.forEach(btn => {
+//         btn.addEventListener('click', function() {
+//             this.closest('.product-item').remove();
+//             updateCartSummary();
+//         });
+//     });
+//
+//     // Clear cart
+//     const clearCartBtn = document.querySelector('.clear-cart');
+//     clearCartBtn.addEventListener('click', function() {
+//         const productsList = document.querySelector('.products-list');
+//         const productItems = document.querySelectorAll('.product-item');
+//
+//         productItems.forEach(item => {
+//             item.remove();
+//         });
+//
+//         updateCartSummary();
+//     });
+//
+//     // Update cart summary
+//     function updateCartSummary() {
+//         const productItems = document.querySelectorAll('.product-item');
+//         let totalItems = 0;
+//         let totalPrice = 0;
+//         let totalDiscount = 0;
+//
+//         productItems.forEach(item => {
+//             const quantity = parseInt(item.querySelector('.quantity-input').value);
+//             const currentPrice = parseInt(item.querySelector('.current-price').textContent.replace(/\D/g, ''));
+//             const oldPrice = parseInt(item.querySelector('.old-price').textContent.replace(/\D/g, ''));
+//
+//             totalItems += quantity;
+//             totalPrice += currentPrice * quantity;
+//             totalDiscount += (oldPrice - currentPrice) * quantity;
+//         });
+//
+//         document.querySelector('.summary-row span:first-child').textContent = `${totalItems} товара`;
+//         document.querySelector('.summary-row span:last-child').textContent = `${formatPrice(totalPrice)} ₽`;
+//         document.querySelectorAll('.summary-row')[1].querySelector('span:last-child').textContent = `-${formatPrice(totalDiscount)} ₽`;
+//         document.querySelector('.total-row span:last-child').textContent = `${formatPrice(totalPrice)} ₽`;
+//     }
+//
+//     // Format price with thousands separator
+//     function formatPrice(price) {
+//         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+//     }
+//
+//     // Initial update
+//     updateCartSummary();
+// });

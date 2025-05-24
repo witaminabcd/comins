@@ -1,0 +1,428 @@
+
+.cart {
+  @include container();
+  .header-cart {
+    background-color: white;
+    padding: 15px 0;
+
+    //position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 1px 0px 0px #E4E7EA;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-left a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-left a i {
+    margin-right: 5px;
+  }
+
+  .header-center {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 330px;
+
+
+    span{
+      padding-left: 20px;
+      border-left: 1px solid black;
+    }
+  }
+
+  .header-right {
+    font-weight: bold;
+  }
+
+  /* Main content */
+  .cart-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Cart title */
+  .cart-title {
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 39.84px;
+    line-height: 52px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-top: 30px;
+    color: black;
+  }
+
+  /* Cheaper banner */
+  .cheaper-banner {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .cheaper-banner-btn{
+    width: 110px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    a{
+      font-family: GT Eesti Pro Display;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      text-align: center;
+      vertical-align: middle;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-offset: 0%;
+      text-decoration-thickness: 0%;
+      text-decoration-skip-ink: auto;
+      color: black;
+    }
+  }
+
+  /* Products list */
+  .products-list {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .products-list-wrap{
+    display: flex;
+    gap: 2rem;
+  }
+  .product-item {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #E4E7EA;
+    gap: 15px;
+  }
+
+  .product-item:last-child {
+    border-bottom: none;
+  }
+
+  .product-image {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .product-info-wrap{
+    .product-sku{
+      display: flex;
+      gap: 1rem;
+      color: #9EA3AF;
+
+      span{
+        font-family: GT Eesti Pro Display;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 14px;
+        letter-spacing: 1.2px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: black;
+      }
+    }
+  }
+  .product-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .product-sku {
+    color:  #9EA3AF;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .prices {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .current-price {
+    font-weight: bold;
+    color: black;
+    margin-right: 10px;
+    font-size: 14px;
+    margin-right: 10px;
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 14.88px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
+
+  .old-price {
+    text-decoration: line-through;
+    color:  #9EA3AF;
+
+
+  }
+
+  .discount {
+    color: #D61E3D;
+    font-size: 12px;
+    padding: 2px 5px;
+  }
+
+  .quantity-control {
+    display: flex;
+    align-items: center;
+  }
+
+  .minus {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F1F3F4;
+
+  }
+  .plus{
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    //border-radius-topleft: 12px;
+    //border-radius-bottomleft: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F1F3F4;
+  }
+
+  .quantity-input {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border: 1px solid #F1F3F4;
+  }
+  .prices-summ{
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 14.88px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+  }
+  .remove-btn {
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .remove-btn i {
+    margin-right: 5px;
+  }
+
+  .clear-cart {
+    margin-top: 20px;
+    background: none;
+    color: var(--dark-gray);
+    cursor: pointer;
+    align-items: center;
+    font-size: 14px;
+    margin-right: 5px;
+    height: 40px;
+    border-radius: 12px;
+    width: 195px;
+    border: 1px solid #E4E7EA;
+    display: flex;
+    justify-content: center;
+  }
+
+  .clear-cart i {
+    margin-right: 5px;
+  }
+
+  /* Cart summary */
+  .cart-summary {
+    width: 300px;
+    background-color: #F1F3F4;
+    border-radius: 11px;
+    padding: 35px;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+  }
+
+  .summary-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  .total-row {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 50px;
+    padding-top: 15px;
+    font-family: GT Eesti Pro Display;
+    font-weight: 400;
+    font-size: 12.9px;
+    line-height: 16.9px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #798897;
+
+  }
+
+  .checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 13px;
+    transition: background-color 0.3s;
+  }
+
+  .checkout-btn:hover {
+    background-color: #F1F3F4;
+    color: black;
+  }
+
+  .one-click-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: unset;
+  }
+
+  .one-click-btn:hover {
+    background-color:black ;
+    color: #F1F3F4;
+  }
+  .prices-mobile-look{
+    display: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cart-wrap {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+    .prices-desctop-none{
+      display: none;
+    }
+    .products-list-wrap{
+      flex-direction: column;
+    }
+
+    .cart-summary {
+      width: 100%;
+      position: static;
+      gap: 0;
+      padding: 20px;
+    }
+    .prices-mobile-look{
+      display: flex;
+      width: 100%;
+      height: 60px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .product-item{
+      flex-wrap: wrap;
+      img{
+        height: 62px;
+
+      }
+    }
+    .cart-summary-btn-wrap{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 40px;
+    }
+    .checkout-btn{
+      width: calc(50% - 0.5rem);
+      height: 39px;
+    }
+    .summary-row{
+      margin-bottom: 0;
+    }
+    .total-row{
+      display: none;
+    }
+    .one-click-btn{
+      width: calc(50% - 0.5rem);
+      height: 39px;
+
+    }
+    .clear-cart{
+      display: none;
+    }
+  }
+}
